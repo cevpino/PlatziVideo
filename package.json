@@ -12,6 +12,7 @@
   "author": "Cesar Valle <cevpino@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "md5": "^2.3.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

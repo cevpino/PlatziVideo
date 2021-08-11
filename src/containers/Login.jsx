@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { loginRequest } from '../actions';
 import '../assets/styles/components/Login.scss';
@@ -72,6 +73,11 @@ const Login = props => {
 			</section>
 		</section>
 	);
+}
+
+Login.propTypes = {
+	email: PropTypes.string,
+	password: PropTypes.string,
 }
 
 const mapDispatchToProps = {

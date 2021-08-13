@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { loginRequest } from '../actions';
 import '../assets/styles/components/Login.scss';
+import Header from '../components/Header';
 import googleIcon from '../assets/static/img/google_icon.png';
 import twitterIcon from '../assets/static/img/twitter_icon.png';
 
@@ -25,6 +26,8 @@ const Login = props => {
 		props.history.push('/');
 	}
 	return (
+		<>
+		<Header isLogin />
     	<section className='login'>
 			<section className='login__container'>
 				<h2>Inicia sesión</h2>
@@ -65,13 +68,14 @@ const Login = props => {
 					</div>
 				</section>
 				<p className='login__container--register'>
-					No tienes ninguna cuenta 
+					No tienes ninguna cuenta {' '}
 					<Link to="/register">
 						Regístrate
 					</Link>
 				</p>
 			</section>
 		</section>
+		</>
 	);
 }
 

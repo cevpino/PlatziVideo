@@ -4,6 +4,7 @@ import Search from '../components/Search';
 import Categories from '../components/Categories';
 import Carousel from '../components/Carousel';
 import CarouselItem from '../components/CarouselItem';
+import Header from '../components/Header';
 /* import useInitialState from '../hooks/useInitialState'; */
 
 import '../assets/styles/App.scss';
@@ -15,7 +16,8 @@ const Home = ({myList, trends, originals}) => {
     /* return initialState.length === 0 ? <h1>Loading...</h1> : ( */
         return (
         <>
-            <Search />
+            <Header />
+            <Search isHome />
             {myList !==undefined && myList?.length > 0 && (
                 <Categories title="Mi lista">
                     <Carousel>
